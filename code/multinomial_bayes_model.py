@@ -1,5 +1,6 @@
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
+# from nltk.stem.porter import PorterStemmer
 
 def build_model(X,y):
     '''
@@ -11,6 +12,7 @@ def build_model(X,y):
             model for scoring and predicting
     '''
     vect, _model = TfidfVectorizer(stop_words='english'), MultinomialNB()
+    # stemmer = PorterStemmer()
 
     _vectorizer = vect.fit_transform(X)
     model = _model.fit(_vectorizer,y)
