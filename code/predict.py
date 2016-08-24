@@ -1,4 +1,4 @@
-def predict(vectorizer,X,y):
+def predict(vectorizer,model,X,y):
     '''
     FUNC: test model, print accuracy
 
@@ -7,5 +7,5 @@ def predict(vectorizer,X,y):
     output: predictions
     '''
     X = vectorizer.transform(X)
-    print "Accuracy:", model.score(X, y)
+    # print "Accuracy:", model.score(X, y)
     return "Predictions:", model.predict(X)
