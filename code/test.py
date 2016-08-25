@@ -4,9 +4,9 @@ import pandas as pd
 from multinomial_bayes_model import build_model
 from predict import predict
 
-X = pd.read_csv('/Users/drewrice/Desktop/Github/Galvanize/final-assessment-2/data/train.txt', header=None)
+X = pd.read_csv(path1, header=None)
 X.columns = ['body']
-y = pd.read_csv('/Users/drewrice/Desktop/Github/Galvanize/final-assessment-2/data/labels.txt', header=None)
+y = pd.read_csv(path2, header=None)
 y.columns = ['label']
 
 # train test split for evaluation purposes
